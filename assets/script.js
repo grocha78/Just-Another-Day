@@ -27,33 +27,8 @@ var saveTasks = function() {
 $(".save-Btn").on("click", function() {
     var value = $(this).siblings(".input-text-area").val();
     console.log(value);
-    var time = $(this).siblings(".time-of-day").val();
+    var time = $(this).attr("id")
     console.log(time);
     localStorage.setItem(time, value);
 });
 
-// modal is fully visible
-$("#task-form-modal").on("shown.bs.modal", function() {
-    // highlight textarea
-    $("#modalTaskDescription").trigger("focus");
-  });
-  
-  // save button in modal was clicked
-  $("#task-form-modal .btn-save").click(function() {
-    // get form values
-    var taskText = $("#modalTaskDescription").val();
-  
-    if (taskText === true) {
-      createTask(taskText, "input-text-area");
-  
-      // close modal
-      $("#task-form-modal").modal("hide");
-  
-      // save in tasks array
-      tasks.input-text-area.push({
-        text: taskText,
-      });
-  
-      saveTasks();
-    }
-  });
