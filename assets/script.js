@@ -20,13 +20,16 @@ var createTask = function(taskText) {
 }
 
 var saveTasks = function() {
-    localStorage.seetItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-// saveBtn was clicked to trigger modal
-$("#task-form-modal").on("show.bs.modal", function() {
-    // clear values
-    $("#modalTaskDescription").val("");
+// saveBtn was clicked
+$(".save-Btn").on("click", function() {
+    var value = $(this).siblings(".input-text-area").val();
+    console.log(value);
+    var time = $(this).siblings(".time-of-day").val();
+    console.log(time);
+    localStorage.setItem(time, value);
 });
 
 // modal is fully visible
@@ -36,7 +39,7 @@ $("#task-form-modal").on("shown.bs.modal", function() {
   });
   
   // save button in modal was clicked
-  $("#task-form-modal .btn-primary").click(function() {
+  $("#task-form-modal .btn-save").click(function() {
     // get form values
     var taskText = $("#modalTaskDescription").val();
   
