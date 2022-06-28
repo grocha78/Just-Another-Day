@@ -15,28 +15,29 @@
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <h1 class="display-3">The Perfect Day</h1>
+      <p class="lead">A Weekly Calendar App for Scheduling Your Work Week</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row">
+
         <div class="hour col border-top border-right border-dark">
             <h4 class="time-of-day">9AM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
-        <div class="col border saveBtn" id="time-of-day">
-            <i class="fa-solid fa-floppy-disk ml-3"></i>
+        <div class="col border"> 
+        <button id="time-of-day" class="btn btn-blick btn-add" data-toggle="modal" data-target="#task-form-modal"><span class="fa-solid fa-floppy-disk ml-3"></span></button>
         </div>
 
         <div class="hour col border-top border-right border-dark">
             <h4 class="time-of-day">10AM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -46,7 +47,7 @@
             <h4 class="time-of-day">11AM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -56,7 +57,7 @@
             <h4 class="time-of-day">12PM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -66,7 +67,7 @@
             <h4 class="time-of-day">1PM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -76,7 +77,7 @@
             <h4 class="time-of-day">2PM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -86,7 +87,7 @@
             <h4 class="time-of-day">3pM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -96,7 +97,7 @@
             <h4 class="time-of-day">4PM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -106,7 +107,7 @@
             <h4 class="time-of-day">5PM</h4>
         </div>
         <div class="col-xl-10 border bg-light" id="input-schedule">
-            <h4 class="input-text-area">Input text for a scheduled event goes here</h4>
+            <h4 class="input-text-area"></h4>
         </div>
         <div class="col border saveBtn" id="time-of-day">
             <i class="fa-solid fa-floppy-disk ml-3"></i>
@@ -114,6 +115,33 @@
       </div>
 
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="myModalTitle">Add New Task</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="modalTaskDescription">Task description</label>
+                  <textarea id="modalTaskDescription" rows="3" class="form-control"></textarea>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-save">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>

@@ -21,6 +21,14 @@ body {
     border-bottom: 10px solid black;
   }
   
+  .display-3 {
+    color: #385a38;
+  }
+
+  .lead {
+    color: #103410;
+  }
+
   .description{
     white-space: pre-wrap;
   }

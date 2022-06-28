@@ -12,3 +12,45 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
+// current time at top of page
+var currentTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+$("#currentDay").append(currentTime);
+
+var createTask = function(taskText) {
+}
+
+var saveTasks = function() {
+    localStorage.seetItem("tasks", JSON.stringify(tasks));
+};
+
+// saveBtn was clicked to trigger modal
+$("#task-form-modal").on("show.bs.modal", function() {
+    // clear values
+    $("#modalTaskDescription").val("");
+});
+
+// modal is fully visible
+$("#task-form-modal").on("shown.bs.modal", function() {
+    // highlight textarea
+    $("#modalTaskDescription").trigger("focus");
+  });
+  
+  // save button in modal was clicked
+  $("#task-form-modal .btn-primary").click(function() {
+    // get form values
+    var taskText = $("#modalTaskDescription").val();
+  
+    if (taskText === true) {
+      createTask(taskText, "input-text-area");
+  
+      // close modal
+      $("#task-form-modal").modal("hide");
+  
+      // save in tasks array
+      tasks.input-text-area.push({
+        text: taskText,
+      });
+  
+      saveTasks();
+    }
+  });
