@@ -16,19 +16,47 @@
 var currentTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 $("#currentDay").append(currentTime);
 
-var createTask = function(taskText) {
-}
+var rows = document.getElementsByClassName("row");
+let currentHour = parseInt(moment().format("H"));
+console.log(currentHour);
 
-var saveTasks = function() {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-};
-
-// saveBtn was clicked
-$(".save-Btn").on("click", function() {
-    var value = $(this).siblings(".input-text-area").val();
-    console.log(value);
-    var time = $(this).attr("id")
-    console.log(time);
-    localStorage.setItem(time, value);
-});
-
+// makes a row id to compare
+Array.from(rows).forEach(row => {
+    let
+      rowIdString = row.id,
+      rowHour;
+    if (rowIdString) {
+      rowHour = parseInt(rowIdString);
+    }
+    if (rowHour) {
+      // Compares row id to current hour and sets color accordingly
+      if (currentHour === rowHour) {
+        setColor(row, "#23c714");
+      } else if ((currentHour < rowHour)){
+        setColor(row, "#35b7df");
+      } else {
+        setColor(row, "lightgrey");
+      }
+    }
+  });
+  
+  // function to set the background color based of hour
+  function setColor(element, color) {
+    element.style.backgroundColor = color;
+  }
+  
+  function save_data() {
+    var input = document.getElementById('textArea8').value;
+    localStorage.setItem('text8', input);
+  }
+  document.getElementById('textArea8').value = localStorage.getItem('text8');
+  
+  function save_data(e){
+    var number = $(e).data('num');
+    var input = document.getElementById('textArea' + number).value;
+    localStorage.setItem('text' + number, input);
+  }
+  
+  for(var i = 8; i <= 17; i++){
+    document.getElementById('textArea' + i).value = localStorage.getItem('text' + i);
+  }

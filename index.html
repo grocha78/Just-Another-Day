@@ -13,7 +13,7 @@
     <title>Just Another Day</title>
   </head>
 
-  <body>
+<body>
     <header class="jumbotron">
       <h1 class="display-3">The Perfect Day</h1>
       <p class="lead">A Weekly Calendar App for Scheduling Your Work Week</p>
@@ -21,96 +21,124 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row">
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">9AM</h4>
+      <div class="row" id="8">
+        <div class="col-2 hour border border-dark text-center"> 8am
         </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="nine-text-area"></textarea> 
-        <button id="nine" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea8" name="text8" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
         </div>
-       </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="8" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="9">
+        <div class="col-2 hour border border-dark text-center"> 9am
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0 " id="textArea9" name="text9" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="9" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="10">
+        <div class="col-2 hour border border-dark text-center"> 10am
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea10" name="text10" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="10" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="11">
+        <div class="col-2 hour border border-dark text-center">11am
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea11" name="text11" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="11" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="12">
+        <div class="col-2 hour border border-dark text-center"> 12pm
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea12" name="text12" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="12" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="13">
+        <div class="col-2 hour border border-dark text-center"> 1pm
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea13" name="text13" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="13" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="14">
+        <div class="col-2 hour border border-dark text-center"> 2pm
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea14" name="text14" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="14" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
+  
+      <div class="row" id="15">
+        <div class="col-2 hour border border-dark text-center"> 3pm
+        </div>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea15" name="text15" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
+        </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="15" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
 
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">10AM</h4>
+      <div class="row" id="16">
+        <div class="col-2 hour border border-dark text-center"> 4pm
         </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="ten-text-area"></textarea> 
-        <button id="ten" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea16" name="text16" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
         </div>
-       </div>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="16" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
+        </div>
+      </div>
 
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">11AM</h4>
+      <div class="row" id="17">
+        <div class="col-2 hour border border-dark text-center"> 5pm
         </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="eleven-text-area"></textarea> 
-        <button id="eleven" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
+        <div class="col-8 form-group">
+          <textarea class="form-control bg-transparent border-0" id="textArea17" name="text17" rows="1" placeholder="Type activity here"></textarea>
+          </textarea>
         </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">12PM</h4>
+        <div class="col-2 saveBtn">
+          <button onclick='save_data(this)' data-num="17" type="submit" class="btn btn-primary mb-2"><span class="oi oi-file"></span></button>
         </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="twelve-text-area"></textarea> 
-        <button id="twelve" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">1PM</h4>
-        </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="thirteen-text-area"></textarea> 
-        <button id="thirteen" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">2PM</h4>
-        </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="fourteen-text-area"></textarea> 
-        <button id="fourteen" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">3PM</h4>
-        </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="fifteen-text-area"></textarea> 
-        <button id="fifteen" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">4PM</h4>
-        </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="sixteen-text-area"></textarea> 
-        <button id="sixteen" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
-
-       <div class="col-12 d-flex">
-        <div class="hour col border-top border-right border-dark">
-            <h4 class="time-of-day">5PM</h4>
-        </div>
-        <div class="col-xl-10 border bg-light" id="input-schedule">
-            <textarea class="input-text-area" id="seventeen-text-area"></textarea> 
-        <button id="seventeen" class="btn btn-blick btn-add save-Btn" ><span class="fa-solid fa-floppy-disk ml-3"></span>Save</button>
-        </div>
-       </div>
       </div>
 
     </div>
