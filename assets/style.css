@@ -30,7 +30,7 @@ body {
 
   .leader {
     background: #FF0000;
-    background: radial-gradient(circle farthest-corner at center center, #FF0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #FF0000 100%);
+    background: linear-gradient(to left, #FF0000 0%, #000000 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -46,7 +46,7 @@ body {
   
   .row {
     white-space: pre-wrap;
-    height: 80px;
+    line-height: 10px;
     border-top: 1px solid #000000;
     font-weight: bold;
   }
